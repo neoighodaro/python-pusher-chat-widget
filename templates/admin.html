@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/admin.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">Dashboard</a>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row" id="mainrow">
+            <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+                <ul class="nav nav-pills flex-column" id="rooms">
+                </ul>
+            </nav>
+            <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" id="main">
+                <h1>Chats</h1>
+                <p>👈 Select a chat to load the messages</p>
+                <p>&nbsp;</p>
+                <div class="chat" style="margin-bottom:150px">
+                    <h5 id="room-title"></h5>
+                    <p>&nbsp;</p>
+                    <div class="response">
+                        <form id="replyMessage">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter Message" class="form-control" name="message" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-striped">
+                        <tbody id="chat-msgs">
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/popper.js') }}"></script>
+	  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+	  <script type="text/javascript" src="{{ url_for('static', filename='js/axios.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/admin.js') }}"></script>
+  </body>
+</html>
