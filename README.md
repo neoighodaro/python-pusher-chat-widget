@@ -15,17 +15,13 @@ What things you need to install the software.
 
 ## Install
 
-Clone the git repository on your computer
-
-``` $ git clone https://github.com/neoighodaro-articles/...```
-
-You can also download the entire repository as a zip file and unpack in on your computer if you do not have git
+Clone the git repository on your computer or download the entire repository as a zip file and unpack in on your computer if you do not have git
 
 After cloning the application, you need to install its dependencies.
 
 ``` $ cd ...```
 
-``` $ sudo pip install flask, pusher```
+``` $ sudo pip install flask pusher flask-cors```
 
 ## Setup
 
